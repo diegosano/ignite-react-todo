@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(0px - 1.6875rem);
+  margin-bottom: 4rem;
+}
+
+.container input {
+  width: 39.875rem;
+  height: 3.375rem;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--blue-500);
+  color: var(--white);
+  width: 5.625rem;
+  height: 3.375rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background: var(--blue-300);
+}
+
+.container button > svg {
+  margin-left: 0.5rem;
+}
