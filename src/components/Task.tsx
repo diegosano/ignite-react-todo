@@ -1,4 +1,6 @@
-import { Trash } from 'phosphor-react';
+import { Trash } from 'phosphor-react'
+
+import { Checkbox } from './Checkbox'
 
 import styles from './Task.module.css'
 
@@ -22,7 +24,7 @@ export function Task({ id, content, concluded, onConcludedTask, onDeleteTask }: 
   return (
     <div className={styles.task}>
       <header>
-        <input type="checkbox" checked={concluded} onChange={handleOnChange} />
+        <Checkbox checked={concluded} onChange={handleOnChange} />
       </header>
 
       <div className={styles.content}>
