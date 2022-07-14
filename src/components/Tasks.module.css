@@ -1,0 +1,38 @@
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.created, .concluded {
+  height: 100%;
+}
+
+.created p, .concluded p {
+  line-height: 1.0625;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.created p {
+  color: var(--blue-300);
+}
+
+.concluded p {
+  color: var(--purple-300);
+}
+
+.counter {
+  background: var(--gray-400);
+  color: var(--gray-200);
+  line-height: 0.9375;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  padding: 2px 8px;
+}
+
+.tasks {
+  /* border-top: 1px solid var(--gray-400);
+  border-radius: 8px; */
+}
