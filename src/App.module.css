@@ -11,4 +11,8 @@
   html {
     font-size: 87.5%;
   }
+
+  .wrapper {
+    padding: 0 1rem;
+  }
 }

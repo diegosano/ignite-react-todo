@@ -36,3 +36,19 @@
 .container button > svg {
   margin-left: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0 0 2rem;
+  }
+
+  .container input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .container button {
+    width: 100%;
+  }
+}

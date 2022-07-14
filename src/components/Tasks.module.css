@@ -48,3 +48,13 @@
 .bold {
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .infos {
+    flex-direction: column;
+  }
+
+  .created, .concluded {
+    margin-bottom: 1rem;
+  }
+}
