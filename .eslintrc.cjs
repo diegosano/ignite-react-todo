@@ -32,6 +32,9 @@ module.exports = {
       parserOptions: {
         project: ['./tsconfig.json'],
       },
+      ignorePatterns: [
+        'vite.config.ts',
+      ],
       rules: {
         'import/extensions': [
           'error',
