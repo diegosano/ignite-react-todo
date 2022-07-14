@@ -1,8 +1,8 @@
-import { Trash } from 'phosphor-react'
+import { Trash } from 'phosphor-react';
 
-import { Checkbox } from './Checkbox'
+import { Checkbox } from './Checkbox';
 
-import styles from './Task.module.css'
+import styles from './Task.module.css';
 
 interface TaskProps {
   id: string;
@@ -12,19 +12,21 @@ interface TaskProps {
   onDeleteTask: (id: string) => void;
 }
 
-export function Task({ id, content, concluded, onConcludedTask, onDeleteTask }: TaskProps) {
+export function Task({
+  id, content, concluded, onConcludedTask, onDeleteTask,
+}: TaskProps) {
   function handleOnChange() {
-    onConcludedTask(id, !concluded)
+    onConcludedTask(id, !concluded);
   }
 
   function handleOnDelete() {
-    onDeleteTask(id)
-  }	
+    onDeleteTask(id);
+  }
 
   return (
     <div className={styles.task}>
       <header>
-        <Checkbox checked={concluded} onChange={handleOnChange} />
+        <Checkbox id={id} checked={concluded} onChange={handleOnChange} />
       </header>
 
       <div className={styles.content}>
@@ -35,5 +37,5 @@ export function Task({ id, content, concluded, onConcludedTask, onDeleteTask }: 
         <Trash size={24} onClick={handleOnDelete} />
       </footer>
     </div>
-  )
+  );
 }

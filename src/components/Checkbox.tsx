@@ -1,19 +1,21 @@
-import styles from './Checkbox.module.css'
+import styles from './Checkbox.module.css';
 
 interface CheckboxProps {
+  id: string;
   checked: boolean;
   onChange: () => void;
 }
 
-export function Checkbox( { checked, onChange }: CheckboxProps) {
+export function Checkbox({ id, checked, onChange }: CheckboxProps) {
   return (
-  <label className={styles.container}>
-    <input
-      type="checkbox"
-      checked={checked}
-      onChange={onChange}
-    />
-    <span className={styles.checkmark}></span>
-  </label>
-  )
+    <label htmlFor={id} className={styles.container}>
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={onChange}
+        id={id}
+      />
+      <span className={styles.checkmark} />
+    </label>
+  );
 }

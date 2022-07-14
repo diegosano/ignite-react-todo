@@ -25,5 +25,5 @@ export function Clipboard() {
         />
       </defs>
     </svg>
-  )
+  );
 }
