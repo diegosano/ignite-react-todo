@@ -32,7 +32,19 @@
   padding: 2px 8px;
 }
 
-.tasks {
-  /* border-top: 1px solid var(--gray-400);
-  border-radius: 8px; */
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.empty > svg {
+  margin: 4rem 0 1rem;
+}
+
+.bold {
+  font-weight: 700;
 }

@@ -1,3 +1,4 @@
+import { Clipboard } from './Clipboard'
 import { Task } from './Task'
 
 import styles from './Tasks.module.css'
@@ -30,13 +31,13 @@ export function Tasks({ tasks, onConcludeTask, onDeleteTask }: TasksProps) {
         
         <div  className={styles.concluded}>
           <p>
-            Concluídas <span className={styles.counter}>{concludedTasks}</span>
+            Concluídas <span className={styles.counter}>{createdTasks > 0 ? `${concludedTasks} de ${createdTasks}` : 0}</span>
           </p> 
         </div>
       </header>
 
-      <section className={styles.tasks}>
-        {sortedTasks.map(task => (
+      <section>
+        {sortedTasks.length ? sortedTasks.map(task => (
           <Task 
             key={task.id}
             id={task.id}
@@ -45,7 +46,13 @@ export function Tasks({ tasks, onConcludeTask, onDeleteTask }: TasksProps) {
             onConcludedTask={onConcludeTask}
             onDeleteTask={onDeleteTask}
           />
-        ))}
+        )) : (
+          <section className={styles.empty}>
+            <Clipboard />
+            <p className={styles.bold}>Você ainda não tem tarefas cadastradas</p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </section>
+        )}
       </section>
     </div>
   )
