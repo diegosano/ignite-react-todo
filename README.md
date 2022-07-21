@@ -47,7 +47,7 @@ Start the server
 
 ## :page_facing_up: License
 
-This project is under the [MIT license](./LICENSE).
+This project is under the [MIT license](./LICENCE).
 
 #
 
